@@ -1,0 +1,37 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+	<lightning:buttonGroup>
+            <lightning:button label="Refresh" />
+            <lightning:button label="Edit" />
+            <lightning:button label="Save" />
+    </lightning:buttonGroup>
+    
+    <br/><br/>
+    
+    <Div Class="Grid">
+    	<h2 class="header">Basic Input Date</h2>
+        <lightning:input type="date" name="Basic Date" label="Enter a date" placeholder="type here..." />
+        <lightning:input type="date" name="input1" label="Enter a date" />
+        <lightning:input type="date" name="input2" label="Date field with a predefined value" value="2017-09-07"/>
+        <lightning:input type="date" name="input3" label="Date field with ISO8601 formatted value" value="2017-09-07T00:00:00Z"/>
+        <lightning:input type="date" name="input4" label="Date field with placeholder" placeholder="type here..."/>
+    </Div>
+    
+    <Div Class="Grid">
+    	<lightning:input type="date" name="Basic Date" label="Enter a date" placeholder="type here..." />        
+    </Div>
+    
+    <br/><br/>
+    <lightning:input type="password" label="Enter your password" name="input1"  />
+    
+    <Div Class="Grid slds-m-around_medium">
+    <lightning:card footer="Card Footer" title="Hello">
+        <aura:set attribute="actions">
+            <lightning:button label="New"/>
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+            Card Body (custom component)
+        </p>
+    </lightning:card>
+    </Div>
+    
+</aura:component>

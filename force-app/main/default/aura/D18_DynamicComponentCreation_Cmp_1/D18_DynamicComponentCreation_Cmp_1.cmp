@@ -1,0 +1,16 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >	
+    <aura:handler name="init" value="{!this}" action="{!c.pageLoad_Doinit}" />    
+    <!--<div class="dvclsone" aura:id="firstDiv">
+    <div class="slds-hide" aura:id="firstDiv">-->    
+    <br/>    
+    <lightning:button variant="brand" label="Hide Div" title="Brand action" onclick="{! c.hide_div }" />
+    <lightning:button variant="brand" label="Show Div" title="Brand action" onclick="{! c.unhide_div }" />    
+    <br/>    
+    <div class="" aura:id="firstDiv">
+    	<p>Data Displayed</p>
+    </div>    
+    <br/>    
+    <div aura:id="divOne">
+    	{!v.body}
+    </div>    
+</aura:component>

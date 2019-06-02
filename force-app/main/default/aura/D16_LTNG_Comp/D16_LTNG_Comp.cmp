@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+
+    <aura:registerEvent name="D16_Event" type="c:D16_LTNG_AppEvent"/>
+    
+    <!--
+	<div class="exampleHolder"><lightning:spinner alternativeText="Loading" size="small" /></div>
+    <div class="exampleHolder"><lightning:spinner alternativeText="Loading" size="medium" /></div>
+    <div class="exampleHolder"><lightning:spinner alternativeText="Loading" size="large" /></div>
+    -->
+    
+    <h1>Component-1-Simple Application Event Sample</h1>
+    <lightning:select name="Industry_Select" label="Select Industry" required="true" onchange="{!c.fireApplicationEvent}">
+        <option value="">Select...</option>
+        <option value="Banking">BNK</option>
+        <option value="Education">EDU</option>
+        <option value="Industry">INDS</option>
+    </lightning:select>
+    
+</aura:component>

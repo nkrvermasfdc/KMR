@@ -1,0 +1,11 @@
+<apex:page controller="SingleAccountRecordCreate_Class" showHeader="false">
+    <apex:form >
+        <apex:pageblock >
+        	<apex:pageBlockSection >
+                <apex:inputField value="{!accOne.name}" label="accountname"/>
+           </apex:pageBlockSection>
+        </apex:pageblock>
+        
+    	<apex:commandButton value="save" action="{!savingAccountRec}"/>
+    </apex:form>
+</apex:page>

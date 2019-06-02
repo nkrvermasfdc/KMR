@@ -1,0 +1,26 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >    
+    <Div style="width: 50%">        
+		<ui:message title="Confirmation" severity="confirm" closable="true">
+				This is a confirmation message.
+		</ui:message>
+		<ui:message title="Information" severity="info" closable="true">
+				This is a message.
+		</ui:message>
+		<ui:message title="Warning" severity="warning" closable="true">
+				This is a warning.
+		</ui:message>
+		<ui:message title="Error" severity="error" closable="true">
+				This is an error message.
+		</ui:message>    
+    
+    	<br/>    
+    	<ui:outputText value="OutPut Text"/>
+    	<br/>
+    	<lightning:button variant="brand" label="Un-Recoverable Error" title="Brand action" onclick="{! c.throw_Unrecoverable_Error}" />
+        <lightning:button variant="brand" label="Recoverable Error" title="Brand action" onclick="{! c.throw_recoverable_Error}" />
+    </Div>
+    
+    <div aura:id="div1">
+    
+    </div>
+</aura:component>

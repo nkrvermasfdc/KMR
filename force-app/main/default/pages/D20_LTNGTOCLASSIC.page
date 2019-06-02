@@ -1,0 +1,44 @@
+<apex:page >
+    <apex:includeLightning />    
+    <h6> This a Lightning  Component at Rendered at Visual Force Page </h6>
+    <Br/>    
+    <div id="divone" />
+    
+    <script>
+        $Lightning.use("c:D20_LTNG_TO_CLASSIC_Dependency_APP", function(){
+            $Lightning.createComponent(
+                "c:D20_LTNG_ChangeHandler",
+                {
+                
+                },
+                "divone",
+                function(cmpval){
+        			alert('Lightning Component was created........'+cmpval);
+                }
+            );
+        });        
+    </script>
+       
+</apex:page>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--$Lightning.use("c:OLIList", function() {
+                $Lightning.createComponent("c:OLIListComp",
+                { label : "Add Products!", priceBookId:'{!opp.priceBook2Id}',oppId:'{!opp.Id}',oppName:'{!opp.Name}' },
+                "lightning",
+                function(cmp) {
+                    // do some stuff
+                });
+            });-->

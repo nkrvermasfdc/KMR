@@ -1,0 +1,19 @@
+<apex:page showHeader="false" controller="Getter_Setter_Property">
+	<apex:form >
+        
+        <apex:pageBlock >
+        	<apex:pageBlockSection title="Getter_Setter_Property" collapsible="true">
+        		<apex:inputText value="{!color}" label="color" style="color:red; background-color:yellow;"/>    
+            </apex:pageBlockSection>
+           	
+            <apex:pageBlockSection title="Output Details" collapsible="true">
+                <apex:outputText value="{!ColorClone}"/>
+            </apex:pageBlockSection>
+        	
+            <apex:pageBlockButtons location="top">
+        		<apex:commandButton action="{!someAction}" value="setting"/>
+        	</apex:pageBlockButtons>            
+        </apex:pageBlock>     
+        
+    </apex:form>
+</apex:page>

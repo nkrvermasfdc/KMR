@@ -1,0 +1,33 @@
+<!-- // Day == 2 == // Global Variables == Standard Controller == Custom Controller == Extension Controller-->
+
+<apex:page standardController="Student__c">
+    <apex:pageBlock title="Pageblock">  
+            
+        <apex:pageblockSection title="Name Section">            
+            Student Name : {!Student__c.Name__c} <br/>
+        </apex:pageblockSection>  
+        
+        <apex:pageblockSection title="Grade Section" rendered="true">
+            Student Class: {!Student__c.Class_Grade__c}<br/>
+        </apex:pageblockSection>
+        
+        <apex:pageblockSection title="ID Section">   
+            Student id : {!Student__c.id}
+        </apex:pageblockSection>          
+                
+    </apex:pageBlock>     
+</apex:page>
+
+
+<!--
+
+  User Name : {! $User.firstName}{! $User.lastName} <br/>
+  User   Id : {! $User.Id} <br/>  
+  Profile for the user : {! $profile.Id}<br/><br/>
+  
+  Profile Name : {! $profile.Name}<br/>
+  Profile Id   : {! $Profile.Id}<br/><br/>
+  
+  Orgination details : {! $organization.Id}<br/>
+  Orgination Name    : {! $organization.Name}  
+-->

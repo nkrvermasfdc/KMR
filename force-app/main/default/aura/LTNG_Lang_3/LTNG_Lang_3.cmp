@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <aura:attribute name="textarribute" type="string" default=""/>
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}" />
+    
+    <Div class="slds-text-title slds-text-align_center slds-m-bottom_large"> Day 12</Div>
+    <p>{!v.textarribute}</p>
+    
+</aura:component>

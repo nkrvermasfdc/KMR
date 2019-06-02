@@ -1,0 +1,42 @@
+<apex:page showheader="true" controller="JS_Remote_Action">
+
+  <apex:form id="fm">  
+      <apex:pageBlock mode="edit" id="pb">
+      
+          <apex:pageblockSection title="JS Remote Action" id="pbs">
+              <apex:inputtext label="Search Account" id="SearchTextBox"/>
+              <apex:commandButton value="Search" reRender="pbs2" onclick="gettingdata();"/>
+          </apex:pageblockSection>
+              
+          <apex:pageblockSection id="pbs2">
+            <apex:outputText id="opt1"/>
+          </apex:pageblockSection>
+          
+      </apex:pageBlock>
+  </apex:form>
+  
+  <Script>
+      function gettingdata(){
+         var inp = document.getElementById('{!$Component.fm.pb.pbs.searchTextBox}');
+         var accname = inp.value;
+         alert(accname);
+          
+         Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.JS_Remote_Action.getaccountIds}',
+            accname,
+            function(result, event){ //callback function
+                if (event.status) {
+                   alert(result);
+                   debugger;
+                   document.getElementById('{!$Component.fm.pb.pbs2.opt1}').innerText= result;
+                } else if (event.type === 'exception') {
+                    alert(event.type);
+                }   
+            }, 
+            {escape: true}
+        );
+        return false;            
+          
+      }
+  </script>    
+</apex:page>

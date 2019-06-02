@@ -1,0 +1,34 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:Attribute name ="UserName" type="string" default=""/>
+    <aura:Attribute name ="AccountName" type="string" default=""/>
+    
+    <div class="c-container">
+        <lightning:layout >
+            
+            <lightning:layoutItem padding="around-small" class="itemcls">
+                <div class="header-column">
+                    
+                    <lightning:button variant="brand" label="Get User" title="Base action" onclick="{! c.buttonClick }"/>
+    				<p>{!v.UserName}</p>
+                    <p>{!v.AccountName}</p>
+                </div>
+            </lightning:layoutItem>
+            
+            <lightning:layoutItem padding="around-small" class="itemcls">
+                <div class="header-column">
+                    <c:D14_LTNG_ChildComp_AuraMethod aura:Id="chldcomp_AuraMethod"/>
+                </div>
+            </lightning:layoutItem>
+            
+         </lightning:layout>
+    </div>
+    
+    <div>
+        
+    </div>
+    
+    <div>
+        
+    </div>
+    
+</aura:component>

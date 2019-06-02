@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    
+    <aura:Attribute name="inpval" type="Integer" default=""/>
+    <aura:Attribute name="inpval2" type="Integer" default=""/>
+    
+    <aura:handler   name="change" value="{!v.inpval}"  action="{!c.myAction}"/>
+    <aura:handler   name="change" value="{!v.inpval2}" action="{!c.myAction}"/>
+    
+    <lightning:input name="input" type="number" label="Enter_Number" value="{!v.inpval}"  aura:id="ipidv"/>
+    <lightning:input name="input" type="number" label="Enter_Number" value="{!v.inpval2}" aura:id="ipidv2"/>
+    
+    old value:    <ui:outputNumber  value="" aura:id="opOld"    /> <br/>
+    Current Value:<ui:outputNumber  value="" aura:id="opCurrent"/>
+</aura:component>

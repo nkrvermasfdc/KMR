@@ -1,0 +1,8 @@
+<aura:tokens extends="force:base"> <!-- Use Extends to use all the standard Token -->
+    <aura:token name="Red_Color"    value="red"/>
+    <aura:token name="Yellow_Color" value="yellow"/>
+    <aura:token name="Green_Color"  value="green"/>
+    
+    <aura:token name="Width_230"  value="230px"/>
+    <aura:token name="Width_330"  value="330px"/>
+</aura:tokens>

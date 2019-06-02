@@ -1,0 +1,12 @@
+<apex:page showHeader="false">
+    <!--
+    -->
+    <head> <!-- All Meta Data things can be decleared--></head>
+    <body>
+        <!-- All the document we are viewing in the page\document can be decleared here -->    
+        <p>This is my firdt Paragraph</p>
+        <p>This is my Second Paragraph</p>
+        <h1>This is my Second Heading </h1>
+        <h2>This is my Second Heading </h2>
+    </body>
+</apex:page>

@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="D16_ApexClass">
+    
+    <aura:attribute name="AccList" type="Account[]" default=""/>
+    <aura:handler event="c:D16_LTNG_AppEvent" action="{!c.handleApplicationEvent}"/>
+    
+    <p>Second Component</p>
+    <aura:iteration items="{!v.AccList}" var="acc">
+        {!acc.Name}<br/>        
+    </aura:iteration>
+    
+</aura:component>

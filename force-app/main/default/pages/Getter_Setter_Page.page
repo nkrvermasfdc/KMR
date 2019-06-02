@@ -1,0 +1,9 @@
+<apex:page showHeader="false" controller="Getter_Setter_Class">
+    <apex:form >
+    	<apex:pageblock title="Getter Setter Method">
+            <apex:inputtext value="{!DisplayString}"/>
+            
+            <apex:commandButton action="{!setterActionMethod}" value="UpdateColor"/> <br/>
+    	</apex:pageblock>
+    </apex:form>
+</apex:page>

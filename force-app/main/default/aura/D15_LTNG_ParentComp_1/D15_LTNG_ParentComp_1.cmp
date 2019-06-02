@@ -1,0 +1,46 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="D15_ApexClass_CBC">
+
+    <aura:handler name="sendingParamEvent" event="c:D15_LTNG_event" action="{!c.parentComp_HandlerAction}"/>
+    <aura:attribute name="accountListRecs" type="Account[]" default=""/>
+    <aura:attribute name="isRecordsAvailable" type="boolean" default="false"/>
+    
+    <Div class="slds-scrollable_y" style="width: 50rem;">
+    <c:D15_LTNG_ChildComp_1/>
+    </Div>
+    
+    <aura:if isTrue="{!v.isRecordsAvailable}">
+        
+    	<Div class="slds-scrollable_y" style="width: 50rem;">
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+      <thead>
+        <tr class="slds-line-height_reset">
+          <th class="" scope="col"><div class="slds-truncate" title="Account Name">Account Name</div></th>
+          <th class="" scope="col"><div class="slds-truncate" title="Acount ID">Acount ID</div></th>
+          <th class="" scope="col"><div class="slds-truncate" title="Industry">Industry</div></th>  
+        </tr>
+      </thead>      
+      <tbody>
+        <aura:iteration items="{!v.accountListRecs}" var="a">
+            <tr class="slds-hint-parent">             
+              <td data-label="Account Name"><div class="slds-truncate" title="Name">{!a.Name}</div></td>
+              <td data-label="Account ID">
+                <div class="slds-truncate" title="ACC_ID">
+                    <!--<a href="javascript:void(0);" tabindex="-1" value="yyy">
+                        {!a.Id}
+                    </a>-->
+                    <ui:outputText value="{!a.Id}"/>
+                </div>
+              </td>
+              <td data-label="Account industry"><div class="slds-truncate" title="Industry">{!a.industry}</div></td>  
+            </tr>
+        </aura:iteration>
+      </tbody>      
+	</table>
+    </Div>
+        
+        <aura:set attribute="else">
+        	<p>No Data</p>
+        </aura:set>
+    </aura:if>
+    
+</aura:component>

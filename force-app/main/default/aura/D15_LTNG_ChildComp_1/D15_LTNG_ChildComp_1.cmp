@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+    <aura:registerEvent name="sendingParamEvent" type="c:D15_LTNG_event"/>
+    
+    <div onkeyup="{! c.handleKeyUp }">
+    	<lightning:input
+    	aura:id="enter-search"
+    	name="enter-search"
+    	label="Search when user hits the 'enter' key"
+        type="search"
+    	/>
+    </div>
+
+</aura:component>

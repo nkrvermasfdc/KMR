@@ -1,0 +1,88 @@
+<apex:page standardController="Student__c" showHeader="True">
+
+   <apex:form >
+    <apex:pageBlock title=" 'Page Block Section Item'">
+         
+         <apex:pageBlockSection title="OutPut Tag 1">  
+             <apex:outputText value="{!Student__c.Name}"/>
+             <apex:outputField value="{!Student__c.Class_Grade__c}"/>
+             <apex:outputLink value="https://www.Youtube.com/">YouTube</apex:outputLink>
+         </apex:pageBlockSection>
+         
+         <apex:pageBlockSection title="PageBlockSectionItem 1">         
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel Value="Name Input Field : " for="IPF"/> 
+                 <apex:inputfield value="{!Student__c.Name}" id="IPF"/>
+             </apex:pageBlockSectionItem>    
+             
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel Value="Name Input Field : "/> 
+                 <apex:inputfield value="{!Student__c.Name}"/>
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel Value="Name Input Text  : "/>
+                 <apex:inputtext value="{!Student__c.Name}"/>
+             </apex:pageBlockSectionItem>
+                                       
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Name Input Secret: "/>
+                 <apex:inputsecret value="{!Student__c.Name}"/>
+             </apex:pageBlockSectionItem>
+
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Name Input Hidden: "/>
+                 <apex:inputHidden value="{!Student__c.Name}"/>
+             </apex:pageBlockSectionItem>
+             
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel Value="{!$Objecttype.Student__c.Fields.Descr__c.Label}"/>
+                 <apex:inputtextarea value="{!Student__c.Descr__c}"/>
+             </apex:pageBlockSectionItem>             
+                                       
+        </apex:pageBlockSection>
+     
+    </apex:pageBlock>
+   </apex:form> 
+    
+    <apex:pageBlock title=" 'Page Block Section' Use Case">
+        <apex:form >
+            <apex:pageblockSection title="Student Details 1" columns="2">
+                <apex:inputfield value="{!Student__c.Name}"/>
+                <apex:inputtext value="{!Student__c.Name}"/>
+                <apex:inputsecret value="{!Student__c.Name}"/>
+                <apex:inputHidden value="{!Student__c.Name}"/>
+                
+                <apex:inputtextarea value="{!Student__c.Descr__c}"/>
+            </apex:pageblockSection>
+        </apex:form>
+    </apex:pageBlock>
+
+    <apex:pageBlock title="Input Tags">
+        <apex:form >
+            Name Input Field : <apex:inputfield value="{!Student__c.Name}"/><br/><br/> 
+            Name Input Text  : <apex:inputtext value="{!Student__c.Name}"/><br/><br/>
+            Name Input Secret: <apex:inputsecret value="{!Student__c.Name}"/><br/><br/>
+            Name Input Hidden: <apex:inputHidden value="{!Student__c.Name}"/><br/><br/>
+            
+            Description :<apex:inputtextarea value="{!Student__c.Descr__c}"/><br/><br/>
+      
+        </apex:form>
+    </apex:pageBlock>
+
+    <apex:pageBlock title="Student Details">
+         Student Name : {!Student__c.Name} <BR/>
+         Student Class: {!Student__c.Class_Grade__c}<br/>
+         Student Record Owner : {!Student__c.Owner}
+    </apex:pageBlock>
+    
+</apex:page>
+
+
+
+ <!--            Text
+                 Label
+                 Panel
+                 Fiels
+                 Link
+             -->

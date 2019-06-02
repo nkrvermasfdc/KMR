@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<aura:Attribute name ="ChildUserName"    type="string" default=""/>
+    <aura:Attribute name ="ChildAccountName" type="string" default=""/>
+    
+    <p>{!v.ChildUserName}</p>
+    <p>{!v.ChildAccountName}</p>
+    
+</aura:component>

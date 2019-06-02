@@ -1,0 +1,60 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    
+    <div class="slds-align_absolute-center 
+                    slds-border_bottom slds-box 
+                    slds-text-title_caps slds-box 
+                    slds-theme_shade 
+                    slds-theme_alert-texture"
+             Style="margin:5px;">
+            My First Component
+    </div>
+    
+    <div class="slds-box boxcls " Style="margin:5px;">
+        <div Class = "slds-text-body_small">My First Component -- Body Small</div>
+        <div Class = "slds-text-heading_large">My First Component -- Heading Large</div>
+        <div Class = "slds-text-heading_small">My First Component -- Heading Small</div>
+        <div Class = "slds-text-title_caps">My First Component -- Title Cap</div>
+        <div Class = "slds-text-align_right">My First Component -- Align Right</div>
+        <div Class = "slds-text-color_error">My First Component -- Color Error</div>
+    </div>
+    
+    <div Class="slds-grid slds-p-top_medium slds-m-bottom_large" Style="border-color:Red; border-style:solid;">
+    	<div class="slds-col slds-size_6-of-12">Grid Col 1</div>
+        <div class="slds-col">Grid Col 2</div>
+        <div class="slds-col">Grid Col 3</div>
+        <div class="slds-col">Grid Col 4</div>
+    </div>
+    
+    <div class="bgccls">
+  		<div class="slds-text-color_inverse">My First Component</div>
+	</div>
+    
+    <div class="slds-scrollable_x slds-m-top_x-small Gridcls" style="height: 5rem; width: 24rem;">
+      <p>Scrollable Content Here</p>
+      <div class="slds-text-longform" style="width: 150%;">
+        <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.</p>
+        <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.</p>
+        <p>Sit nulla est ex deserunt exercitation anim occaecat. Nostrud ullamco deserunt aute id consequat veniam incididunt duis in sint irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit officia tempor esse quis.</p>
+      </div>
+    </div>
+	
+    
+    <div class="slds-media slds-m-top_large Gridcls">
+        <div class="slds_media__figure">
+            <span class="slds-avatar slds-avatar_large">
+            	<img alt="Person name" src="/assets/images/avatar3.jpg" title="User avatar" />
+            </span>
+        </div>
+        
+    	<div class="slda_media__body">
+            <p>This is Media div Section. we are learning about media and Media Figure and Media body</p>
+        </div>
+    </div>
+    
+    <Div>
+    	<input style="width: 30px;"> </input>
+    </Div>
+    
+    
+    
+</aura:component>

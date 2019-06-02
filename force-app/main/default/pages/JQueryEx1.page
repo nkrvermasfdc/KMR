@@ -1,0 +1,145 @@
+<apex:page ShowHeader="True" standardController="account">
+    <Head>
+        <!--<apex:includeScript value="{!$Resource.JQueryFileSlim}"/>-->
+        <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"/>
+    </Head>
+    
+    <body> 
+        <apex:outputpanel id="optnl1"> 
+        <!-- HTML Element --> 
+        <p id="pone" Class="clspone"> This my JQuery Ex </P>
+        </apex:outputpanel>
+        
+        <!-- VF Element -->
+        <apex:outputText value="OutputText" id="opt1" styleClass="opt1Cls"/>
+        
+        <apex:form >
+            <apex:outputlabel > Account Name : </apex:outputlabel>
+            <apex:inputtext value="{!account.name}" id="ipt1" styleClass="ipt1cls"/>
+            
+            <apex:outputPanel id="optpnl2">
+                <apex:commandButton value="hit" id="btn" onclick="create();" rerender="optpnl2"/>
+            </apex:outputPanel>
+            
+        </apex:form> 
+        
+      <!--Script =============================================================-->
+      <Script type= "text/javascript"> 
+      var $j = jQuery.noConflict(); 
+      
+      
+         //====================================================================//        
+         //Create <P> element
+         //====================================================================//      
+          
+          function create(){    
+                
+              // Creating html element
+              var d = $j('<div> </div>');
+              d.text('This is div and created dynamically');
+          
+              // Insert the above created element into this page inside body
+              $j('[id*=optnl1]').append(d);
+              
+              d.css({        
+              "background-color" : "green",
+              "color":"white"
+              });    
+              
+              console.log('Here create ==> ' + d.text());
+              
+              //Remove any element
+              $j('#pone').remove();
+          }
+          
+          
+         //====================================================================//        
+         //Hidding and unhidding an element ny id
+         //====================================================================//
+         //$j('[id*=btn]').click(function(){
+         //$j('#pone').hide();
+         //$j('#pone').toggle();        
+         //});
+         
+         //function toggl(){
+         //    $j('#pone').toggle(); 
+         //}
+        
+        
+         //====================================================================//        
+         //functions created for the use of on button click
+         //====================================================================//        
+         //$j('[id*=btn]').click(function(){
+         //$j('#pone').css({
+         //
+         //    "background-color" : "green",
+         //    "color":"white"
+         //    });        
+         //});
+        
+         //function csschange(){
+         //    $j('#pone').css('background-color','Yellow');
+         //
+         //}
+         
+         
+         
+         //====================================================================//        
+         // Retriving or getting the value for input elements/form elements
+         //====================================================================//                
+         // debugger;
+         //    var pta = $j('[id*=ipt1]').val(); 
+         //    console.log('By ID form Input -- pta==> ' + pta);             
+            
+        //====================================================================//        
+        // Setting the value for input elements/form elements
+        //====================================================================//
+        //  $j('[id*=ipt1]').val('texting');
+            
+        
+        
+        
+        //====================================================================//        
+        // Retriving elements contant by Tagname
+        // debugger; 
+        //====================================================================//  
+        // Retriving or getting data
+        //var pta = $j('p').text();
+        //console.log('By Tag Name -- pta ==> ' + pta);           
+             
+        
+        // Inserting or Setting
+        //$j('p').text('Hi This text is inserted dynamically');
+        //console.log('By Tag Name -- data in pone==> ' + $j('#pone').text()); 
+        
+        
+        //====================================================================//        
+        // Retriving elements contant by Class                
+        // debugger;
+        //====================================================================// 
+        // var vfcls =$j('.opt1Cls');
+        // console.log('By Class -- vfcls ==> ' + vfcls);
+        
+        // var htmlcls =$j('.clspone');
+        // console.log('By Class -- htmlcls ==> ' + htmlcls );
+        
+        
+        //====================================================================//
+        // Retriving elements contant by ID
+        // debugger;
+        //====================================================================// 
+        //    var a =document.getElementById("pone").innertext;
+        //    console.log('By ID -- a ==>' + a);
+        //    
+        //    // ID of the HTML Element
+        //    var b = $j('#pone');
+        //    console.log('By ID -- b ==>' + b);
+        //    
+        //    // ID of the VF Element
+        //    var c = $j('[id*=opt1]'); 
+        //    console.log('By ID -- c ==>' + c); 
+        //====================================================================//                   
+            
+      </Script>
+    </body>
+</apex:page>

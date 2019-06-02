@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+   
+   <aura:attribute name="courseData" type="Array" /> 
+   <ltng:require 
+                 styles ="{!$Resource.External_CSS_File}"
+                 scripts="{!$Resource.External_JS_File}"
+                 afterScriptsLoaded="{!c.External_scriptsLoaded}"
+                 /> 
+    
+	<div class="DviCss">
+    	<p>This is my Lightning CSS external example</p>
+    </div>
+    
+    <div>
+        <aura:iteration items="{!v.courseData}" var="item">
+            {!item} <br/>
+        </aura:iteration>
+    </div>
+</aura:component>

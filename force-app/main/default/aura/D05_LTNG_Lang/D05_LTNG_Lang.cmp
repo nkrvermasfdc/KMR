@@ -1,0 +1,41 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<Div class="slds-text-heading_large slds-text-align_center slds-border_bottom">
+    	Javascript Controller Example
+    </Div>    
+        <br/>
+        <br/>
+    <Div class="slds-grid">
+        <!-- Base variant: Makes a button look like a link -->
+        <lightning:button variant="base" label="Base" title="Base action" onclick="{! c.baseclicked }"/>	
+        <!-- Neutral variant (default) -->
+        <lightning:button label="Neutral" title="Neutral action" onclick="{! c.neutralclicked }"/>
+        <!-- Brand variant: Identifies the primary action in a group of buttons -->
+    	<lightning:button variant="brand" label="Brand action" title="Brand action" onclick="{! c.brandclicked }" />
+        <!-- Destructive variant: Identifies a potentially negative action -->
+    	<lightning:button variant="destructive" label="Destructive" title="Destructive action" onclick="{! c.destructiveclicked }"/>
+        <!-- Success variant: Identifies a successful action -->
+    	<lightning:button variant="success" label="Success" title="Success" onclick="{! c.successclicked }"/>
+	</Div>
+    
+    	<br/><br/>
+        <lightning:icon iconName="action:approval" alternativeText="Approved" />
+    	<lightning:icon iconName="action:add_contact" alternativeText="add_contact" />
+		<br/>    	
+        <lightning:icon iconName="doctype:audio" alternativeText="Audio file" />
+    	<lightning:icon iconName="doctype:folder" alternativeText="folder" />
+    	<lightning:icon iconName="doctype:video" alternativeText="video" />
+    	<br/>
+        <lightning:icon iconName="standard:event" alternativeText="Event" />
+    	<br/>
+        <lightning:icon iconName="utility:connected_apps" alternativeText="Connected" />
+    	<br/>
+        <lightning:icon iconName="utility:warning" alternativeText="Warning!" variant="warning"/>
+    	<br/>
+        <lightning:icon iconName="utility:error" alternativeText="Error!" variant="error"/>
+    	<br/>
+        <lightning:icon iconName="utility:image" alternativeText="Utility image" />
+        <br/>
+    	<lightning:icon iconName="doctype:image" alternativeText="Doc image" />    
+    	<br/><br/>
+
+</aura:component>

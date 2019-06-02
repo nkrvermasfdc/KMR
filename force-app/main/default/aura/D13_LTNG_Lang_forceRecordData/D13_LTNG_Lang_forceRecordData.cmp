@@ -1,0 +1,32 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<aura:Attribute name="accountRecord"  type="object"   default=""/> 
+    <aura:Attribute name="DataFromDesign" type="string"   default=""/> 
+    <aura:Attribute name="Color" type="string"   default=""/> 
+    
+    <force:recordData aura:id="recordLoader"
+    recordId="{!v.recordId}"
+    fields="Name,Description,Phone,Industry"
+    targetFields="{!v.accountRecord}"
+    targetError="{!v.recordLoadError}"
+    /> 
+    
+    <div class="Record Details"> 
+        <lightning:card iconName="standard:account" title="{!v.accountRecord.Name}" >
+            <div class="slds-p-horizontal--small">
+                <p class="slds-text-heading--medium"><lightning:formattedPhone title="Phone" value="{!v.accountRecord.Phone}" /></p>
+                <p class="slds-truncate"><lightning:formattedText title="Description" value="{!v.accountRecord.Description}" /></p>
+                <p class="slds-truncate"> <lightning:formattedText title="Industry" value="{!v.accountRecord.Industry}" /></p>
+                <p>Design Data : {!v.DataFromDesign}</p>
+                <p>Color : {!v.Color}</p>
+            </div>
+        </lightning:card>
+    </div>
+    
+    <!--
+	<br/>
+    <p>Name : {!v.accountRecord.Name} <br/></p>
+    <p>Descr : {!v.accountRecord.Description} <br/></p>
+    <p>Phone : {!v.accountRecord.Phone} <br/></p>
+    <p>Industry : {!v.accountRecord.Industry} <br/></p>
+    -->
+</aura:component>

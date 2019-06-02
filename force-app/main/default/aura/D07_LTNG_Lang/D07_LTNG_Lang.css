@@ -1,0 +1,11 @@
+.THIS.Layout {
+    border-style: solid;
+    border-width: medium;
+    border-color:blue;
+}
+.THIS.PSword{
+    color:white;
+}
+.THIS .header-column {
+    padding: 0 2rem;
+}

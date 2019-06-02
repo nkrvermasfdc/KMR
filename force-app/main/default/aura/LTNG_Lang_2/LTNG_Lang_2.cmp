@@ -1,0 +1,118 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" controller="Retrive_Acc" >
+	
+    <aura:Attribute name="AccountName"    type="string"    default=""/>
+    <aura:Attribute name="listString"     type="string[]"  default="['str1','str2','str3']"/>
+    <aura:Attribute name="AccountList"    type="Account[]" default=""/>    
+    <aura:Attribute name="clicked_Row_Id" type="string"    default=""/>
+    
+    
+    <!--Setting up Component on Load method call -->
+    <aura:handler name="init" value="{!this}" action="{!c.retrieveAccRecords}"/> 
+    
+    <!-- <lightning:button variant="brand" label="Get Account" onclick="{!c.myAction}"/> 
+    <p>Account Name : {!v.AccountName}</p>-->
+    <!-- <aura:iteration items="{!v.listString}" var="a">
+       {!a}<br/>
+    </aura:iteration>-->
+    
+    <lightning:layout horizontalAlign="space">         
+            <lightning:layoutItem padding="around-small">  
+            	<div >
+                    <!-- Search Input Box -->
+                	<lightning:input aura:id="ipOne" label="Account to Search" value="" name="input1" onkeyup="{!c.retrieveAccRecords}" />                
+                    <br/>
+                    <!--<lightning:input aura:id="uiName" label="Enter your Name:" placeholder="Your Name" />-->
+                </div>
+            </lightning:layoutItem>
+         
+            <lightning:layoutItem padding="around-small"> 
+                <div class="header-column slds-m-top_medium">
+                    <!-- Get Account Records Button -->
+                	<lightning:button variant="brand" label="Get Account Argument" onclick="{!c.retrieveAccRecords}"/>                    
+                    <!-- Button to Print Record Details -->
+                    <lightning:button name="Test BTN" variant="brand" label="Test" title="Test" onclick="{!c.rowClick }"  />
+                </div>
+            </lightning:layoutItem>         
+     </lightning:layout>   
+    
+	<table class="slds-table slds-table_cell-buffer slds-table_bordered">
+      <thead>
+        <tr class="slds-line-height_reset">
+          <th class="" scope="col"><div class="slds-truncate" title="Account Name">Account Name</div></th>
+          <th class="" scope="col"><div class="slds-truncate" title="Acount ID">Acount ID</div></th>
+        </tr>
+      </thead>      
+      <tbody>
+        <aura:iteration items="{!v.AccountList}" var="a">
+            <tr class="slds-hint-parent">             
+              <td data-label="Account Name"><div class="slds-truncate" title="Name">{!a.Name}</div></td>
+              <td data-label="Account ID">
+                <div class="slds-truncate" title="ACC_ID">
+                    <!--<a href="javascript:void(0);" tabindex="-1" value="yyy">
+                        {!a.Id}
+                    </a>-->
+                    <ui:outputText value="{!a.Id}" click="{!c.rowClick }" />
+                </div>
+              </td>            
+            </tr>
+        </aura:iteration>
+      </tbody>      
+	</table>
+       
+<!-- Record Edit-->
+<force:recordEdit aura:id="record_Edit" recordId="{!v.clicked_Row_Id}"/>
+<!-- Record Save-->
+<lightning:button label="Save" onclick="{!c.save}"/>
+    
+    
+    
+</aura:component>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<lightning:input aura:id="" name="Record" label="" value="" onkeyup="{!c.rowClick}" />-->  
+            <!--<div class="slds-truncate" title="ID">{!a.Id}</div> onclick="{!c.rowClicked }"-->              
+            <!--<div class="slds-truncate" title="ACC_ID" onclick="{!c.rowClick }" >   
+                <ui:outputText value="{!a.Id}" />
+            </div>
+-->
+
+
+<!-- Way to make the content a link-->  
+                <!--<div class="slds-truncate" title="Name">
+                    <a href="javascript:void(0);" tabindex="-1">{!a.Name}</a>
+                </div>-->
+
+
+ <!--
+        <table class="slds-table ">
+        	<thead>
+                <tr>
+                    <th>Account Name:</th>
+                    <th>Acount ID:</th>
+                </tr>            
+            </thead>
+            <tbody>
+            	<aura:iteration items="{!v.AccountList}" var="a">
+                    <tr>
+                        <td>{!a.Name}</td>
+                        <td>{!a.Id}</td>
+                    </tr>
+               </aura:iteration>
+            </tbody>
+        </table>
+    
+    -->

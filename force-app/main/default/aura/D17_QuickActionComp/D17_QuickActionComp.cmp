@@ -1,0 +1,5 @@
+<aura:component implements="force:lightningQuickAction" controller="D17_QuickActionController">
+	<lightning:input aura:id="acName" name="Name" label="Enter Account Name" />
+    <lightning:input aura:id="acSite" name="Site" label="Enter Account Site" />
+    <lightning:button variant="brand" label="Save action" title="Brand action" onclick="{! c.SaveAccount }" />
+</aura:component>

@@ -1,0 +1,27 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+	<Div Class="slds-text-heading_large slds-text-align_center slds-border_bottom"> Day 7 </Div>
+    
+    <lightning:layout class="Layout">
+        <!--Layout Row One
+        <br/>
+        Layout Row Two
+        <br/>
+        <Div class="slds-grid">
+        	Inside Grid
+        </Div>-->
+        
+         <lightning:layoutItem padding="around-small" class="Layout">
+                <p class="field-title" title="Field 1">Field 1</p>
+                <p>Name</p>
+         </lightning:layoutItem>
+         <lightning:layoutItem padding="around-small" class="Layout">
+                This is Layout Item
+         </lightning:layoutItem>
+         <lightning:layoutItem padding="around-small" class="Layout">
+                This is Layout Item
+         </lightning:layoutItem>
+         <lightning:layoutItem padding="around-small" class="Layout">
+                This is Layout Item
+         </lightning:layoutItem>        
+    </lightning:layout>
+</aura:component>

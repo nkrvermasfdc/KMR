@@ -1,0 +1,16 @@
+.THIS.boxcls{
+    border-style:solid; 
+    border-width:medium; 
+    border-color:blue;
+} 
+
+.THIS.bgccls{
+    padding: 0.5rem; 
+    background: rgb(22, 50, 92);
+}
+
+.THIS.Gridcls{
+    border-style:solid; 
+    border-width:medium; 
+    border-color:Green;
+}

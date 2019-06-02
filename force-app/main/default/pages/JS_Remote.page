@@ -1,0 +1,16 @@
+<apex:page showheader="true" controller="JS_Remote">
+  <apex:form id="fm">  
+      <apex:pageBlock mode="edit" id="pb">
+      
+          <apex:pageblockSection title="JS Remote Action -- PG_Block_Section" id="pbs">
+              <apex:inputtext label="Search Account" value="{!str}" id="SearchTextBox"/>
+              <apex:commandButton value="Search" action="{!act}" reRender="pbs2"/>
+          </apex:pageblockSection>
+          
+          <apex:pageblockSection id="pbs2">
+              <apex:outputText value="{!oupt}"/>
+          </apex:pageblockSection>
+          
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

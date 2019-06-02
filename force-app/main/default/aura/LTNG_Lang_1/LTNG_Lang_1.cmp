@@ -1,0 +1,30 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:Attribute type="integer" name="testone"       default="4"    description="My first number attribute"/>
+    <aura:Attribute type="string"  name="MyStringAttri" default="test" />
+    <aura:Attribute type="boolean" name="MyboolAttri"   default="true"/>
+    <aura:Attribute type="string" name="MycustomAttri"  default=""/>
+    
+    <aura:Attribute type="string" name="Card_str_1"  default="Default"/>
+    <aura:Attribute type="string" name="Card_Title"  default="Title By NKV"/>
+    <aura:Attribute type="string" name="Card_Body"   default=""/>
+    
+    <p> {!v.testone}</p>
+    <p> {!v.MyStringAttri}</p>
+    <p> {!v.MyboolAttri}</p>
+    
+    <!-- Brand variant: Identifies the primary action in a group of buttons -->
+    <lightning:button variant="brand" label="Brand action" title="Brand action" onclick="{! c.myAction }" />
+    <p> This is my Custom Attribute: {!v.MycustomAttri}</p>
+    
+    <br>    </br>
+    <br>    </br>
+    
+    <lightning:card footer="Card Footer" title="{! v.Card_Title}">
+        <aura:set attribute="actions">
+            <lightning:button label="New" onclick="{! C.Card_Action }"/>
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+            <p>{!v.Card_Body}</p>
+        </p>
+    </lightning:card>
+</aura:component>
