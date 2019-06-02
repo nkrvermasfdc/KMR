@@ -1,6 +1,6 @@
 public class Awaytoset_Getter_Setter {
 
-   //Getter Setter Method; 
+   //Getter Setter Method; test
    public string color{
         get{
             system.debug('Exit -- color in Getter method --> ' + color);
